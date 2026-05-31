@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import EmailVerification from './pages/email-verification';
 import ResetPassword from './pages/reset-password';
