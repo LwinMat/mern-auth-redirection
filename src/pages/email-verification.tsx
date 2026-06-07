@@ -17,7 +17,7 @@ function EmailVerification() {
 
   const handleEmailVerification = async () => {
     try{
-      const backendUrl = "http://localhost:5000/api/users/verify-email";
+      const backendUrl = "http://localhost:5001/api/users/verify-email";
       await axios.post(backendUrl, { tokenId });
       setSuccess(true);
     }catch(error) {
