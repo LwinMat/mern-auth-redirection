@@ -2,7 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function EmailVerification() {
-  
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   // read tokenId from url query params
   const urlParams = new URLSearchParams(window.location.search);
@@ -11,9 +12,6 @@ function EmailVerification() {
   if (!tokenId) {
     return <div>Invalid token</div>;
   }
-
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const handleEmailVerification = async () => {
     try{
@@ -31,6 +29,7 @@ function EmailVerification() {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     handleEmailVerification();
   }, [tokenId]);
 
