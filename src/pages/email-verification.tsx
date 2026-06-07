@@ -26,10 +26,7 @@ function EmailVerification() {
     }finally{
       setLoading(false);
     }
-
-    const backendUrl = "http://localhost:5000/api/users/verify-email";
-    axios.post(backendUrl, { tokenId })
-  }
+  };
 
 
   useEffect(() => {
